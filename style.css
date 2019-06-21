@@ -383,6 +383,7 @@
   .contact-section {
     padding: 0 2rem;
     background: var(--main-white);
+    padding-bottom: 30px;
   }
 
   .contact-section > h2{
