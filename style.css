@@ -215,7 +215,6 @@
     0%{ width: 0; }
   }
   
-  
   .title-s{
     font-size: 3rem;
     color: var(--main-gray);
@@ -268,7 +267,7 @@
   
   .projects-section {
     text-align: center;
-    padding: 10rem 2rem;
+    padding: 10rem;
     background: var(--main-yellow);
   }
   
@@ -328,6 +327,58 @@
     transform: scale(1.05);
     transition: all 0.5s; 
   }
+
+
+  /* Present project */
+  .present-section {
+    text-align: center;
+    padding: 0px 20px 100px 20px;
+    background: var(--main-yellow);
+  }
+  
+  .present-section-header {
+    max-width: 640px;
+    margin: 0 auto 6rem auto;
+    border-bottom: 0.2rem solid var(--main-white);
+    text-align: center;
+  }
+
+ .tech-slideshow {
+  height: 200px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+}
+
+.tech-slideshow > div {
+  height: 200px;
+  width: 2526px;
+  background: url(https://uppic.cc/d/KLvV);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  transform: translate3d(0, 0, 0);
+}
+.tech-slideshow .mover-1 {
+  animation: moveSlideshow 12s linear infinite;
+}
+.tech-slideshow .mover-2 {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+  background-position: 0 -200px;
+  animation: moveSlideshow 15s linear infinite;
+}
+.tech-slideshow:hover .mover-2 {
+  opacity: 1;
+}
+
+@keyframes moveSlideshow {
+  100% { 
+    transform: translateX(-66.6666%);  
+  }
+}
   
   /* Contact */
   .contact-section {
