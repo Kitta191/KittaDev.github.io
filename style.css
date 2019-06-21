@@ -27,7 +27,6 @@
     scroll-behavior: smooth;
   }
   
-  
   body {
     font-family: 'Poppins', sans-serif;
     font-size: 1.8rem; /* 18px */
@@ -36,8 +35,7 @@
     color: var(--main-white);
   }
   
-  h1,
-  h2 {
+  h1, h2 {
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
   }
@@ -57,27 +55,20 @@
   }
   
   a {
-    background:
-       linear-gradient(
-         to bottom, var(--mainColor) 0%,
-         var(--mainColor) 100%
-       );
-      background-position: 0 100%;
-      background-repeat: repeat-x;
-      background-size: 4px 4px;
+    background: linear-gradient(to bottom, var(--mainColor) 0%, var(--mainColor) 100%);
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-size: 4px 4px;
     color: #000;
     text-decoration: none;
     transition: background-size .2s;
-  
   }
   
   a:hover {
     background-size: 4px 50px;
     text-decoration: none;
     color: var(--main-white);
-    
   }
-  
   
   img {
     display: block;
@@ -89,7 +80,6 @@
   }
   
   /* nav */
-  
   .nav {
     display: flex;
     justify-content: center;
@@ -116,10 +106,7 @@
     padding: 2rem;
   }
   
-  
-  
   /* Main */
-  
   .welcome-section {
     display: flex;
     flex-direction: column;
@@ -159,6 +146,30 @@
   }
   
   /* About */
+  .rounded {
+    border-radius: 50% !important;
+    -webkit-animation: shadow-drop-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite both;
+    animation: shadow-drop-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite both;
+  }
+
+  @-webkit-keyframes shadow-drop-center {
+    0% {
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+    100% {
+      box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+    }
+  }
+
+  @keyframes shadow-drop-center {
+    0% {
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+    100% {
+      box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+    }
+  }
+
   .progress{
     height: 10px;
     background: #e9e9ea;
@@ -168,6 +179,7 @@
     overflow: visible;
     position: relative;
   }
+
   .progress:before,
   .progress:after{
     content: "";
@@ -180,11 +192,13 @@
     left: 0;
     z-index: 1;
   }
+
   .progress:after{
     border: 7px solid #e9e9ea;
     left: auto;
     right: 0;
   }
+
   .progress .progress-bar{
     box-shadow: none;
     border: none;
@@ -194,6 +208,7 @@
     animation: animate-positive 1s;
     background-color: var(--main-yellow);
   }
+
   .progress .progress-value{
     width: 70px;
     height: 35px;
@@ -211,6 +226,7 @@
   @-webkit-keyframes animate-positive{
     0%{ width: 0; }
   }
+
   @keyframes animate-positive{
     0%{ width: 0; }
   }
@@ -225,8 +241,8 @@
     text-align: center;
     padding: 10rem 2rem;
     background: #f4f4f4;
-    
   }
+
   .about-mf{
     padding-top: 100px;
     padding-bottom: 100px;
@@ -235,6 +251,7 @@
   .about-mf > h2{
     color: var(--main-gray);
   }
+
   .about-section-header {
     max-width: 640px;
     margin: 0 auto 6rem auto;
@@ -264,7 +281,6 @@
   }
   
   /* Projects */
-  
   .projects-section {
     text-align: center;
     padding: 10rem;
@@ -328,7 +344,6 @@
     transition: all 0.5s; 
   }
 
-
   /* Present project */
   .present-section {
     text-align: center;
@@ -343,42 +358,26 @@
     text-align: center;
   }
 
- .tech-slideshow {
-  height: 200px;
-  margin: 0 auto;
-  position: relative;
-  overflow: hidden;
-  transform: translate3d(0, 0, 0);
-}
-
-.tech-slideshow > div {
-  height: 200px;
-  width: 2526px;
-  background: url(https://uppic.cc/d/KLvV);
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  transform: translate3d(0, 0, 0);
-}
-.tech-slideshow .mover-1 {
-  animation: moveSlideshow 12s linear infinite;
-}
-.tech-slideshow .mover-2 {
-  opacity: 0;
-  transition: opacity 0.5s ease-out;
-  background-position: 0 -200px;
-  animation: moveSlideshow 15s linear infinite;
-}
-.tech-slideshow:hover .mover-2 {
-  opacity: 1;
-}
-
-@keyframes moveSlideshow {
-  100% { 
-    transform: translateX(-66.6666%);  
+  .wrapper {
+    overflow: hidden;
   }
-}
+  
+  .sliding-background {
+    background: url("https://uppic.cc/d/KLv2") repeat-x;
+    height: 200px;
+    width: 5076px;
+    animation: slide 30s linear infinite;
+    border: 7px solid var(--main-white);
+  }
+  
+  @keyframes slide{
+    0%{
+      transform: translate3d(0, 0, 0);
+    }
+    100%{
+      transform: translate3d(-1692px, 0, 0);
+    }
+  }
   
   /* Contact */
   .contact-section {
@@ -438,7 +437,6 @@
     font-style: italic;
   }
   
-  
   /* Footer */
   footer {
     font-weight: 300;
@@ -452,8 +450,7 @@
   footer > p {
     margin: 2rem;
   }
-  
-  
+
   @media (max-width: 75em) {
     html {
       font-size: 60%;
@@ -461,13 +458,11 @@
     
   }
   
-  
   @media (max-width: 61.25em) {
     html {
       font-size: 58%;
     }
   }
-  
   
   @media (max-width: 28.75em) {
     html {
@@ -488,7 +483,7 @@
       height: 4rem;
       margin-top: 5px;
       margin-bottom: 5px;
-  }
+    }
     .nav {
       justify-content: center;
     }
